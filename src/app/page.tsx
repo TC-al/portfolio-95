@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import LoadingScreen from "../components/loading-screen"
 import Desktop from "../components/desktop"
 import Window from "../components/window"
 import AboutWindow from "../components/about-window"
@@ -9,8 +10,13 @@ import ContactWindow from "../components/contact-window"
 import ResumeWindow from "../components/resume-window"
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true)
   const [openWindows, setOpenWindows] = useState<string[]>([])
   const [activeWindow, setActiveWindow] = useState<string | null>(null)
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false)
+  }
 
   const openWindow = (windowId: string) => {
     if (!openWindows.includes(windowId)) {
@@ -29,6 +35,10 @@ export default function Home() {
 
   const focusWindow = (windowId: string) => {
     setActiveWindow(windowId)
+  }
+
+  if (isLoading) {
+    return <LoadingScreen onComplete={handleLoadingComplete} />
   }
 
   return (

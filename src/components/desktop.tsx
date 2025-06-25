@@ -27,7 +27,6 @@ export default function Desktop({ onIconClick }: DesktopProps) {
 
   return (
       <>
-        {/* Desktop Icons */}
         {desktopIcons.map((icon) => (
             <DesktopIcon
                 key={icon.id}
