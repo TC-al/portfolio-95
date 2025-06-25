@@ -19,7 +19,6 @@ body {
   background: #008080 !important;
 }
 
-/* Windows 95 Desktop Background */
 .win95-desktop {
   position: fixed !important;
   top: 0 !important;
@@ -31,7 +30,6 @@ body {
   overflow: hidden !important;
 }
 
-/* Windows 95 specific styles */
 .win95-button {
   background: #c0c0c0 !important;
   border: 2px outset #c0c0c0 !important;
@@ -65,7 +63,6 @@ body {
   background: #c0c0c0 !important;
 }
 
-/* Force teal background everywhere */
 body,
 html,
 #__next,
