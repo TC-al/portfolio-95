@@ -18,6 +18,18 @@ export default function Desktop({ onIconClick }: DesktopProps) {
     return () => clearInterval(timer)
   }, [])
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
+      if (showStartMenu && !target.closest(".start-menu") && !target.closest(".start-button")) {
+        setShowStartMenu(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [showStartMenu])
+
   const desktopIcons = [
     { id: "about", label: "About Me", icon: "📝", x: 30, y: 30 },
     { id: "projects", label: "My Projects", icon: "💼", x: 30, y: 140 },
@@ -38,7 +50,11 @@ export default function Desktop({ onIconClick }: DesktopProps) {
             />
         ))}
 
-        {showStartMenu && <StartMenu onClose={() => setShowStartMenu(false)} />}
+        {showStartMenu && (
+            <div className="start-menu">
+              <StartMenu onClose={() => setShowStartMenu(false)} />
+            </div>
+        )}
 
         <Taskbar onStartClick={() => setShowStartMenu(!showStartMenu)} currentTime={currentTime} />
       </>

@@ -3,8 +3,8 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-    title: "Windows 95 Portfolio",
-    description: "A retro Windows 95 themed portfolio website",
+    title: "Portfolio 95™",
+    description: "Portfolio 95™",
 }
 
 export default function RootLayout({
@@ -12,6 +12,7 @@ export default function RootLayout({
                                    }: {
     children: React.ReactNode
 }) {
+
     return (
         <html lang="en">
         <body className="antialiased">{children}</body>

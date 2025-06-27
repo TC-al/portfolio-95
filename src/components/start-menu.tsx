@@ -5,72 +5,165 @@ interface StartMenuProps {
 }
 
 export default function StartMenu({ onClose }: StartMenuProps) {
+    const handleShutdown = () => {
+        if (typeof window !== "undefined") {
+            window.close()
+        }
+    }
+
     return (
         <div
             style={{
                 position: "absolute",
-                bottom: "28px",
+                bottom: "40px",
                 left: "0px",
-                width: "200px",
+                width: "280px",
                 border: "2px outset #c0c0c0",
                 background: "#c0c0c0",
                 fontFamily: "MS Sans Serif, Tahoma, sans-serif",
                 fontSize: "11px",
                 zIndex: 20,
+                boxShadow: "2px 2px 4px rgba(0,0,0,0.3)",
             }}
         >
             <div
                 style={{
                     background: "linear-gradient(90deg, #0a246a 0%, #a6caf0 100%)",
                     color: "white",
-                    padding: "8px",
+                    padding: "12px 16px",
                     fontWeight: "bold",
-                    fontSize: "11px",
+                    fontSize: "13px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
                 }}
             >
-                Windows 95
+                <span style={{ fontSize: "16px" }}>☢️</span>
+                Portfolio 95™
             </div>
-            <div style={{ padding: "4px" }}>
-                <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+
+            <div style={{ padding: "8px 4px" }}>
+                <div style={{ display: "flex", flexDirection: "column" }}>
                     <div
                         style={{
-                            padding: "4px",
+                            padding: "8px 16px",
                             cursor: "pointer",
                             fontSize: "11px",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "12px",
+                            borderRadius: "0",
                         }}
-                        className="hover:bg-blue-800 hover:text-white"
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = "#0000ff"
+                            e.currentTarget.style.color = "#ffffff"
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = "transparent"
+                            e.currentTarget.style.color = "#000000"
+                        }}
                     >
-                        📝 About Me
+                        <span style={{ fontSize: "16px", width: "20px" }}>📝</span>
+                        About Me
                     </div>
+
                     <div
                         style={{
-                            padding: "4px",
+                            padding: "8px 16px",
                             cursor: "pointer",
                             fontSize: "11px",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "12px",
                         }}
-                        className="hover:bg-blue-800 hover:text-white"
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = "#0000ff"
+                            e.currentTarget.style.color = "#ffffff"
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = "transparent"
+                            e.currentTarget.style.color = "#000000"
+                        }}
                     >
-                        💼 Projects
+                        <span style={{ fontSize: "16px", width: "20px" }}>💼</span>
+                        My Projects
                     </div>
+
                     <div
                         style={{
-                            padding: "4px",
+                            padding: "8px 16px",
                             cursor: "pointer",
                             fontSize: "11px",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "12px",
                         }}
-                        className="hover:bg-blue-800 hover:text-white"
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = "#0000ff"
+                            e.currentTarget.style.color = "#ffffff"
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = "transparent"
+                            e.currentTarget.style.color = "#000000"
+                        }}
                     >
-                        📞 Contact
+                        <span style={{ fontSize: "16px", width: "20px" }}>📞</span>
+                        Contact
                     </div>
+
                     <div
                         style={{
-                            padding: "4px",
+                            padding: "8px 16px",
                             cursor: "pointer",
                             fontSize: "11px",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "12px",
                         }}
-                        className="hover:bg-blue-800 hover:text-white"
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = "#0000ff"
+                            e.currentTarget.style.color = "#ffffff"
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = "transparent"
+                            e.currentTarget.style.color = "#000000"
+                        }}
                     >
-                        📄 Resume
+                        <span style={{ fontSize: "16px", width: "20px" }}>📄</span>
+                        Resume
+                    </div>
+
+                    <div
+                        style={{
+                            height: "1px",
+                            backgroundColor: "#808080",
+                            margin: "8px 12px",
+                            borderTop: "1px solid #404040",
+                            borderBottom: "1px solid #ffffff",
+                        }}
+                    />
+
+                    <div
+                        style={{
+                            padding: "8px 16px",
+                            cursor: "pointer",
+                            fontSize: "11px",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "12px",
+                        }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = "#0000ff"
+                            e.currentTarget.style.color = "#ffffff"
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = "transparent"
+                            e.currentTarget.style.color = "#000000"
+                        }}
+                        onClick={handleShutdown}
+                    >
+                        <span style={{ fontSize: "16px", width: "20px" }}>🔌</span>
+                        Shut Down...
                     </div>
                 </div>
             </div>
