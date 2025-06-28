@@ -7,9 +7,12 @@ import Taskbar from "./taskbar"
 
 interface DesktopProps {
   onIconClick: (windowId: string) => void
+  openWindows: string[]
+  activeWindow: string | null
+  onWindowClick: (windowId: string) => void
 }
 
-export default function Desktop({ onIconClick }: DesktopProps) {
+export default function Desktop({ onIconClick, openWindows, activeWindow, onWindowClick }: DesktopProps) {
   const [showStartMenu, setShowStartMenu] = useState(false)
   const [currentTime, setCurrentTime] = useState(new Date())
 
@@ -31,8 +34,8 @@ export default function Desktop({ onIconClick }: DesktopProps) {
   }, [showStartMenu])
 
   const desktopIcons = [
-    { id: "about", label: "About Me", icon: "📝", x: 30, y: 30 },
-    { id: "projects", label: "My Projects", icon: "💼", x: 30, y: 140 },
+    { id: "about", label: "About Me", icon: "👨‍🎓", x: 30, y: 30 },
+    { id: "projects", label: "Projects", icon: "💼", x: 30, y: 140 },
     { id: "contact", label: "Contact", icon: "📞", x: 30, y: 250 },
     { id: "resume", label: "Resume", icon: "📄", x: 30, y: 360 },
   ]
@@ -52,11 +55,17 @@ export default function Desktop({ onIconClick }: DesktopProps) {
 
         {showStartMenu && (
             <div className="start-menu">
-              <StartMenu onClose={() => setShowStartMenu(false)} />
+              <StartMenu onClose={() => setShowStartMenu(false)} onItemClick={onIconClick} />
             </div>
         )}
 
-        <Taskbar onStartClick={() => setShowStartMenu(!showStartMenu)} currentTime={currentTime} />
+        <Taskbar
+            onStartClick={() => setShowStartMenu(!showStartMenu)}
+            currentTime={currentTime}
+            openWindows={openWindows}
+            activeWindow={activeWindow}
+            onWindowClick={onWindowClick}
+        />
       </>
   )
 }

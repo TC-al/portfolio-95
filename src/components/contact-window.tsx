@@ -42,7 +42,7 @@ export default function ContactWindow() {
             <span style={{ fontSize: "24px" }}>📧</span>
             <div>
               <div style={{ fontSize: "12px", fontWeight: "bold", marginBottom: "2px" }}>Email</div>
-              <div style={{ fontSize: "11px", color: "#000080" }}>your.email@example.com</div>
+              <div style={{ fontSize: "11px", color: "#000080" }}>tc.alanliu@gmail.com</div>
             </div>
           </div>
 
@@ -59,11 +59,13 @@ export default function ContactWindow() {
             <span style={{ fontSize: "24px" }}>💼</span>
             <div>
               <div style={{ fontSize: "12px", fontWeight: "bold", marginBottom: "2px" }}>LinkedIn</div>
-              <div style={{ fontSize: "11px", color: "#000080" }}>linkedin.com/in/yourprofile</div>
+              <div style={{ fontSize: "11px", color: "#000080" }}>
+                  <a href="https://linkedin.com/in/tc-alanliu">linkedin.com/in/tc-alanliu</a>
+              </div>
             </div>
           </div>
 
-          <div
+            <div
               style={{
                 border: "2px inset #c0c0c0",
                 backgroundColor: "#ffffff",
@@ -76,11 +78,13 @@ export default function ContactWindow() {
             <span style={{ fontSize: "24px" }}>🐙</span>
             <div>
               <div style={{ fontSize: "12px", fontWeight: "bold", marginBottom: "2px" }}>GitHub</div>
-              <div style={{ fontSize: "11px", color: "#000080" }}>github.com/yourusername</div>
+                <div style={{fontSize: "11px", color: "#000080"}}>
+                    <a href="https://github.com/TC-al">github.com/TC-al</a>
+                </div>
             </div>
           </div>
 
-          <div
+            <div
               style={{
                 border: "2px inset #c0c0c0",
                 backgroundColor: "#ffffff",
@@ -90,10 +94,10 @@ export default function ContactWindow() {
                 gap: "12px",
               }}
           >
-            <span style={{ fontSize: "24px" }}>🐦</span>
+            <span style={{ fontSize: "24px" }}>🔮</span>
             <div>
-              <div style={{ fontSize: "12px", fontWeight: "bold", marginBottom: "2px" }}>Twitter</div>
-              <div style={{ fontSize: "11px", color: "#000080" }}>@yourusername</div>
+              <div style={{ fontSize: "12px", fontWeight: "bold", marginBottom: "2px" }}>Discord</div>
+              <div style={{ fontSize: "11px", color: "#000080" }}>@yth3</div>
             </div>
           </div>
         </div>
@@ -130,7 +134,7 @@ export default function ContactWindow() {
             }}
         >
           <div style={{ fontSize: "11px", textAlign: "center" }}>
-            💡 <strong>Pro tip:</strong> I respond fastest to emails and LinkedIn messages!
+            💡 <strong>Pro tip:</strong> I respond fastest to emails and linkedin messages!
           </div>
         </div>
       </div>

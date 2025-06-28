@@ -21,31 +21,11 @@ export default function Window({ id, title, children, isActive, onClose, onFocus
     const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 })
     const [resizeStart, setResizeStart] = useState({ x: 0, y: 0, width: 0, height: 0 })
     const [isClient, setIsClient] = useState(false)
-    const [needsScroll, setNeedsScroll] = useState(false)
     const windowRef = useRef<HTMLDivElement>(null)
     const contentRef = useRef<HTMLDivElement>(null)
 
     const minSize = { width: 300, height: 200 }
     const maxSize = { width: 800, height: 600 }
-
-    const checkScrollNeeded = () => {
-        if (contentRef.current) {
-            const container = contentRef.current
-            const { scrollHeight, clientHeight } = container
-
-            const computedStyle = window.getComputedStyle(container)
-            const paddingTop = Number.parseFloat(computedStyle.paddingTop) || 0
-            const paddingBottom = Number.parseFloat(computedStyle.paddingBottom) || 0
-            const totalPadding = paddingTop + paddingBottom
-
-            const tolerance = Math.max(5, totalPadding + 2)
-
-            const actualContentHeight = scrollHeight
-            const availableHeight = clientHeight
-
-            setNeedsScroll(actualContentHeight > availableHeight + tolerance)
-        }
-    }
 
     useEffect(() => {
         setIsClient(true)
@@ -54,19 +34,6 @@ export default function Window({ id, title, children, isActive, onClose, onFocus
             y: 50 + Math.random() * 100,
         })
     }, [])
-
-    useEffect(() => {
-        requestAnimationFrame(() => {
-            checkScrollNeeded()
-        })
-    }, [size, children])
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            requestAnimationFrame(checkScrollNeeded)
-        }, 150)
-        return () => clearTimeout(timer)
-    }, [size])
 
     const handleMouseDown = (e: React.MouseEvent) => {
         if (e.target === e.currentTarget || (e.target as HTMLElement).classList.contains("window-header")) {
@@ -139,8 +106,6 @@ export default function Window({ id, title, children, isActive, onClose, onFocus
             setIsDragging(false)
             setIsResizing(false)
             setResizeDirection("")
-            setTimeout(() => requestAnimationFrame(checkScrollNeeded), 50)
-            setTimeout(() => requestAnimationFrame(checkScrollNeeded), 150)
         }
 
         if (isDragging || isResizing) {
@@ -226,18 +191,20 @@ export default function Window({ id, title, children, isActive, onClose, onFocus
 
             <div
                 ref={contentRef}
+                className="window-content-scrollable"
                 style={{
                     height: "calc(100% - 18px)",
                     background: "#ffffff",
                     border: "1px inset #c0c0c0",
                     position: "relative",
-                    overflow: needsScroll ? "auto" : "hidden",
+                    overflow: "auto",
                     boxSizing: "border-box",
                 }}
             >
                 {children}
             </div>
 
+            {/* Resize handles */}
             <div
                 style={{
                     position: "absolute",

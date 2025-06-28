@@ -2,13 +2,19 @@
 
 interface StartMenuProps {
     onClose: () => void
+    onItemClick: (windowId: string) => void
 }
 
-export default function StartMenu({ onClose }: StartMenuProps) {
+export default function StartMenu({ onClose, onItemClick }: StartMenuProps) {
     const handleShutdown = () => {
         if (typeof window !== "undefined") {
             window.close()
         }
+    }
+
+    const handleMenuItemClick = (windowId: string) => {
+        onItemClick(windowId)
+        onClose()
     }
 
     return (
@@ -38,7 +44,7 @@ export default function StartMenu({ onClose }: StartMenuProps) {
                     gap: "8px",
                 }}
             >
-                <span style={{ fontSize: "16px" }}>☢️</span>
+                <span style={{ fontSize: "16px" }}>🪟</span>
                 Portfolio 95™
             </div>
 
@@ -62,8 +68,9 @@ export default function StartMenu({ onClose }: StartMenuProps) {
                             e.currentTarget.style.backgroundColor = "transparent"
                             e.currentTarget.style.color = "#000000"
                         }}
+                        onClick={() => handleMenuItemClick("about")}
                     >
-                        <span style={{ fontSize: "16px", width: "20px" }}>📝</span>
+                        <span style={{ fontSize: "16px", width: "20px" }}>👨‍🎓</span>
                         About Me
                     </div>
 
@@ -84,9 +91,10 @@ export default function StartMenu({ onClose }: StartMenuProps) {
                             e.currentTarget.style.backgroundColor = "transparent"
                             e.currentTarget.style.color = "#000000"
                         }}
+                        onClick={() => handleMenuItemClick("projects")}
                     >
                         <span style={{ fontSize: "16px", width: "20px" }}>💼</span>
-                        My Projects
+                        Projects
                     </div>
 
                     <div
@@ -106,6 +114,7 @@ export default function StartMenu({ onClose }: StartMenuProps) {
                             e.currentTarget.style.backgroundColor = "transparent"
                             e.currentTarget.style.color = "#000000"
                         }}
+                        onClick={() => handleMenuItemClick("contact")}
                     >
                         <span style={{ fontSize: "16px", width: "20px" }}>📞</span>
                         Contact
@@ -128,6 +137,7 @@ export default function StartMenu({ onClose }: StartMenuProps) {
                             e.currentTarget.style.backgroundColor = "transparent"
                             e.currentTarget.style.color = "#000000"
                         }}
+                        onClick={() => handleMenuItemClick("resume")}
                     >
                         <span style={{ fontSize: "16px", width: "20px" }}>📄</span>
                         Resume
