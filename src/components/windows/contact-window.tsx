@@ -42,12 +42,14 @@ export default function ContactWindow() {
             <span style={{ fontSize: "24px" }}>📧</span>
             <div>
               <div style={{ fontSize: "12px", fontWeight: "bold", marginBottom: "2px" }}>Email</div>
-              <div style={{ fontSize: "11px", color: "#000080" }}>tc.alanliu@gmail.com</div>
+              <div style={{ fontSize: "11px", color: "#000080" }}>
+                  <a href="mailto:tc.alanliu@gmail.com" target="_blank">tc.alanliu@gmail.com</a>
+              </div>
             </div>
           </div>
 
-          <div
-              style={{
+            <div
+                style={{
                 border: "2px inset #c0c0c0",
                 backgroundColor: "#ffffff",
                 padding: "10px",
@@ -60,7 +62,7 @@ export default function ContactWindow() {
             <div>
               <div style={{ fontSize: "12px", fontWeight: "bold", marginBottom: "2px" }}>LinkedIn</div>
               <div style={{ fontSize: "11px", color: "#000080" }}>
-                  <a href="https://linkedin.com/in/tc-alanliu">linkedin.com/in/tc-alanliu</a>
+                  <a href="https://linkedin.com/in/tc-alanliu" target="_blank">linkedin.com/in/tc-alanliu</a>
               </div>
             </div>
           </div>
@@ -79,7 +81,7 @@ export default function ContactWindow() {
             <div>
               <div style={{ fontSize: "12px", fontWeight: "bold", marginBottom: "2px" }}>GitHub</div>
                 <div style={{fontSize: "11px", color: "#000080"}}>
-                    <a href="https://github.com/TC-al">github.com/TC-al</a>
+                    <a href="https://github.com/TC-al" target="_blank">github.com/TC-al</a>
                 </div>
             </div>
           </div>

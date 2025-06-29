@@ -34,7 +34,7 @@ export default function StartMenu({ onClose, onItemClick }: StartMenuProps) {
         >
             <div
                 style={{
-                    background: "linear-gradient(90deg, #0a246a 0%, #a6caf0 100%)",
+                    background: "#000080",
                     color: "white",
                     padding: "12px 16px",
                     fontWeight: "bold",

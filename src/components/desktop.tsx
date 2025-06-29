@@ -38,6 +38,7 @@ export default function Desktop({ onIconClick, openWindows, activeWindow, onWind
     { id: "projects", label: "Projects", icon: "💼", x: 30, y: 140 },
     { id: "contact", label: "Contact", icon: "📞", x: 30, y: 250 },
     { id: "resume", label: "Resume", icon: "📄", x: 30, y: 360 },
+    { id: "extra", label: "Extras", icon: "🌟", x: 30, y: 470 },
   ]
 
   return (

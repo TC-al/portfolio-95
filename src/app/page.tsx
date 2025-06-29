@@ -4,10 +4,11 @@ import { useState } from "react"
 import LoadingScreen from "../components/loading-screen"
 import Desktop from "../components/desktop"
 import Window from "../components/window"
-import AboutWindow from "../components/about-window"
-import ProjectsWindow from "../components/projects-window"
-import ContactWindow from "../components/contact-window"
-import ResumeWindow from "../components/resume-window"
+import AboutWindow from "../components/windows/about-window"
+import ProjectsWindow from "../components/windows/projects-window"
+import ContactWindow from "../components/windows/contact-window"
+import ResumeWindow from "../components/windows/resume-window"
+import ExtraWindow from "../components/windows/extra-window"
 
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true)
@@ -85,6 +86,7 @@ function getWindowTitle(windowId: string): string {
         projects: "Projects",
         contact: "Contact Info",
         resume: "Resume",
+        extra: "Extras",
     }
     return titles[windowId] || "Window"
 }
@@ -99,7 +101,9 @@ function getWindowContent(windowId: string) {
             return <ContactWindow />
         case "resume":
             return <ResumeWindow />
+        case "extra":
+            return <ExtraWindow />
         default:
-            return <div>Window content</div>
+            return <div>How on Earth did you get here... Please send an attached screenshot to tc.alanliu@gmail.com</div>
     }
 }

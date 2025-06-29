@@ -142,7 +142,7 @@ export default function Window({ id, title, children, isActive, onClose, onFocus
                 className="window-header"
                 style={{
                     height: "18px",
-                    background: isActive ? "linear-gradient(90deg, #0a246a 0%, #a6caf0 100%)" : "#c0c0c0",
+                    background: isActive ? "#000080" : "#c0c0c0",
                     fontSize: "11px",
                     fontFamily: "MS Sans Serif, Tahoma, sans-serif",
                     fontWeight: "bold",
@@ -204,7 +204,6 @@ export default function Window({ id, title, children, isActive, onClose, onFocus
                 {children}
             </div>
 
-            {/* Resize handles */}
             <div
                 style={{
                     position: "absolute",
