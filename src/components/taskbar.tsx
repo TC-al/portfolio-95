@@ -23,6 +23,7 @@ export default function Taskbar({ onStartClick, currentTime, openWindows, active
             projects: "My Projects",
             contact: "Contact Info",
             resume: "Resume",
+            extra: "Extracurricular Activities",
         }
         return titles[windowId] || "Window"
     }
@@ -33,6 +34,7 @@ export default function Taskbar({ onStartClick, currentTime, openWindows, active
             projects: "💼",
             contact: "📞",
             resume: "📄",
+            extra: "🏆"
         }
         return icons[windowId] || "🪟"
     }
@@ -88,7 +90,7 @@ export default function Taskbar({ onStartClick, currentTime, openWindows, active
                         e.currentTarget.style.border = "2px outset #c0c0c0"
                     }}
                 >
-                    <span style={{ fontSize: "14px" }}>🪟</span>
+                    <img src="logo.png" alt="" height="16"/>
                     Start
                 </button>
 

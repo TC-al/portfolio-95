@@ -113,7 +113,7 @@ export default function ResumeWindow() {
                           paddingBottom: "4px",
                       }}
                   >
-                      🙋‍♂️ Experience
+                      🙋‍♂️ Volunteer
                   </h3>
                   <div style={{display: "flex", flexDirection: "column", gap: "10px"}}>
                       <div>
@@ -149,7 +149,6 @@ export default function ResumeWindow() {
                           </div>
                       </div>
                   </div>
-              </div>
 
               <div
                   style={{
@@ -251,6 +250,7 @@ export default function ResumeWindow() {
                       </div>
                 </div>
             </div>
+          </div>
         </div>
   )
 }

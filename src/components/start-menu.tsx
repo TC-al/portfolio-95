@@ -44,12 +44,12 @@ export default function StartMenu({ onClose, onItemClick }: StartMenuProps) {
                     gap: "8px",
                 }}
             >
-                <span style={{ fontSize: "16px" }}>🪟</span>
+                <img src="logo.png" alt="" height="16"/>
                 Portfolio 95™
             </div>
 
             <div style={{ padding: "8px 4px" }}>
-                <div style={{ display: "flex", flexDirection: "column" }}>
+                <div style={{display: "flex", flexDirection: "column"}}>
                     <div
                         style={{
                             padding: "8px 16px",
@@ -70,7 +70,7 @@ export default function StartMenu({ onClose, onItemClick }: StartMenuProps) {
                         }}
                         onClick={() => handleMenuItemClick("about")}
                     >
-                        <span style={{ fontSize: "16px", width: "20px" }}>👨‍🎓</span>
+                        <span style={{fontSize: "16px", width: "20px"}}>👨‍🎓</span>
                         About Me
                     </div>
 
@@ -93,7 +93,7 @@ export default function StartMenu({ onClose, onItemClick }: StartMenuProps) {
                         }}
                         onClick={() => handleMenuItemClick("projects")}
                     >
-                        <span style={{ fontSize: "16px", width: "20px" }}>💼</span>
+                        <span style={{fontSize: "16px", width: "20px"}}>💼</span>
                         Projects
                     </div>
 
@@ -116,7 +116,7 @@ export default function StartMenu({ onClose, onItemClick }: StartMenuProps) {
                         }}
                         onClick={() => handleMenuItemClick("contact")}
                     >
-                        <span style={{ fontSize: "16px", width: "20px" }}>📞</span>
+                        <span style={{fontSize: "16px", width: "20px"}}>📞</span>
                         Contact
                     </div>
 
@@ -139,8 +139,31 @@ export default function StartMenu({ onClose, onItemClick }: StartMenuProps) {
                         }}
                         onClick={() => handleMenuItemClick("resume")}
                     >
-                        <span style={{ fontSize: "16px", width: "20px" }}>📄</span>
+                        <span style={{fontSize: "16px", width: "20px"}}>📄</span>
                         Resume
+                    </div>
+
+                    <div
+                        style={{
+                            padding: "8px 16px",
+                            cursor: "pointer",
+                            fontSize: "11px",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "12px",
+                        }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = "#0000ff"
+                            e.currentTarget.style.color = "#ffffff"
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = "transparent"
+                            e.currentTarget.style.color = "#000000"
+                        }}
+                        onClick={() => handleMenuItemClick("extra")}
+                    >
+                        <span style={{fontSize: "16px", width: "20px"}}>🏆</span>
+                        Extras
                     </div>
 
                     <div
@@ -172,7 +195,7 @@ export default function StartMenu({ onClose, onItemClick }: StartMenuProps) {
                         }}
                         onClick={handleShutdown}
                     >
-                        <span style={{ fontSize: "16px", width: "20px" }}>🔌</span>
+                        <span style={{fontSize: "16px", width: "20px"}}>🔌</span>
                         Shut Down...
                     </div>
                 </div>

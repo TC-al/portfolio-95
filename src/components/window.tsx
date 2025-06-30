@@ -19,7 +19,14 @@ export default function Window({ id, title, children, isActive, onClose, onFocus
     const [isResizing, setIsResizing] = useState(false)
     const [resizeDirection, setResizeDirection] = useState("")
     const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 })
-    const [resizeStart, setResizeStart] = useState({ x: 0, y: 0, width: 0, height: 0 })
+    const [resizeStart, setResizeStart] = useState({
+        x: 0,
+        y: 0,
+        width: 0,
+        height: 0,
+        startX: 0,
+        startY: 0,
+    })
     const [isClient, setIsClient] = useState(false)
     const windowRef = useRef<HTMLDivElement>(null)
     const contentRef = useRef<HTMLDivElement>(null)
@@ -56,6 +63,8 @@ export default function Window({ id, title, children, isActive, onClose, onFocus
             y: e.clientY,
             width: size.width,
             height: size.height,
+            startX: position.x,
+            startY: position.y,
         })
         onFocus()
     }
@@ -73,32 +82,29 @@ export default function Window({ id, title, children, isActive, onClose, onFocus
 
                 let newWidth = resizeStart.width
                 let newHeight = resizeStart.height
-                let newX = position.x
-                let newY = position.y
+                let newX = resizeStart.startX
+                let newY = resizeStart.startY
 
                 if (resizeDirection.includes("right")) {
                     newWidth = Math.max(minSize.width, Math.min(maxSize.width, resizeStart.width + deltaX))
                 }
                 if (resizeDirection.includes("left")) {
-                    const widthChange =
-                        Math.max(minSize.width, Math.min(maxSize.width, resizeStart.width - deltaX)) - resizeStart.width
-                    newWidth = resizeStart.width - widthChange
-                    newX = position.x - widthChange
+                    const proposedWidth = resizeStart.width - deltaX
+                    newWidth = Math.max(minSize.width, Math.min(maxSize.width, proposedWidth))
+                    newX = resizeStart.startX + (resizeStart.width - newWidth)
                 }
+
                 if (resizeDirection.includes("bottom")) {
                     newHeight = Math.max(minSize.height, Math.min(maxSize.height, resizeStart.height + deltaY))
                 }
                 if (resizeDirection.includes("top")) {
-                    const heightChange =
-                        Math.max(minSize.height, Math.min(maxSize.height, resizeStart.height - deltaY)) - resizeStart.height
-                    newHeight = resizeStart.height - heightChange
-                    newY = position.y - heightChange
+                    const proposedHeight = resizeStart.height - deltaY
+                    newHeight = Math.max(minSize.height, Math.min(maxSize.height, proposedHeight))
+                    newY = resizeStart.startY + (resizeStart.height - newHeight)
                 }
 
                 setSize({ width: newWidth, height: newHeight })
-                if (resizeDirection.includes("left") || resizeDirection.includes("top")) {
-                    setPosition({ x: newX, y: newY })
-                }
+                setPosition({ x: newX, y: newY })
             }
         }
 
@@ -117,7 +123,7 @@ export default function Window({ id, title, children, isActive, onClose, onFocus
             document.removeEventListener("mousemove", handleMouseMove)
             document.removeEventListener("mouseup", handleMouseUp)
         }
-    }, [isDragging, isResizing, dragOffset, resizeStart, resizeDirection, position])
+    }, [isDragging, isResizing, dragOffset, resizeStart, resizeDirection])
 
     if (!isClient) {
         return null
@@ -204,6 +210,7 @@ export default function Window({ id, title, children, isActive, onClose, onFocus
                 {children}
             </div>
 
+            {/* Corner resize handles */}
             <div
                 style={{
                     position: "absolute",
@@ -255,6 +262,7 @@ export default function Window({ id, title, children, isActive, onClose, onFocus
                 onMouseDown={(e) => handleResizeStart(e, "bottom-right")}
             />
 
+            {/* Edge resize handles */}
             <div
                 style={{
                     position: "absolute",

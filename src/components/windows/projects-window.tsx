@@ -22,7 +22,7 @@ export default function ProjectsWindow() {
       description: "Stock Market Predictor",
       link: "https://stockify.tcal.xyz",
       image: "e",
-      status: "Completed",
+      status: "Live",
     },
     {
       name: "Portfolio 95™",

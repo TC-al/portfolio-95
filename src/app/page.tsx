@@ -83,10 +83,10 @@ export default function Home() {
 function getWindowTitle(windowId: string): string {
     const titles: Record<string, string> = {
         about: "About Me",
-        projects: "Projects",
+        projects: "My Projects",
         contact: "Contact Info",
         resume: "Resume",
-        extra: "Extras",
+        extra: "Extracurriculars",
     }
     return titles[windowId] || "Window"
 }
