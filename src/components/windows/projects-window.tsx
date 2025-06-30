@@ -1,31 +1,35 @@
 export default function ProjectsWindow() {
   const projects = [
     {
-      name: "E-Commerce Platform",
-      tech: "React, Node.js, MongoDB",
-      description: "Full-stack e-commerce solution with payment integration and user management",
-      icon: "🛒",
+      name: "SkinScope",
+      tech: "React, Yolo, Tensorflow, OpenAI API",
+      description: "Skin cancer detect application using the HAM10000 dataset, recognizing 7 different types of skin diseases",
+      link: "https://devpost.com/software/skinscope",
+      image: "SkinScope.jpg",
       status: "Completed",
     },
     {
-      name: "Task Management App",
-      tech: "Next.js, TypeScript, Prisma",
+      name: "Club Bubbles",
+      tech: "React, Node.js, MongoDB, Cerebras API",
       description: "Collaborative project management tool with real-time updates and team features",
-      icon: "📋",
-      status: "In Progress",
-    },
-    {
-      name: "Weather Dashboard",
-      tech: "React, API Integration",
-      description: "Beautiful weather app with location-based forecasts and interactive maps",
-      icon: "🌤️",
+      link: "https://devpost.com/software/club-bubbles",
+      image: "ClubBubbles.jpg",
       status: "Completed",
     },
     {
-      name: "Portfolio Website",
-      tech: "Next.js, Tailwind CSS",
+      name: "Stockify",
+      tech: "Next.js, API Integration, Supabase",
+      description: "Stock Market Predictor",
+      link: "https://stockify.tcal.xyz",
+      image: "e",
+      status: "Completed",
+    },
+    {
+      name: "Portfolio 95™",
+      tech: "Next.js, CSS, Tailwind",
       description: "This retro Windows 95 themed portfolio you're currently viewing!",
-      icon: "💻",
+      link: "https://www.tcal.xyz",
+      image: "logo.png",
       status: "Live",
     },
   ]
@@ -76,7 +80,9 @@ export default function ProjectsWindow() {
                   }}
               >
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
-                  <div style={{ fontSize: "24px", lineHeight: "1", flexShrink: 0 }}>{project.icon}</div>
+                  <div style={{ fontSize: "10px", lineHeight: "1", flexShrink: 0 }}>
+                      <img src={project.image} alt={project.name} height="100" />
+                  </div>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div
                         style={{
@@ -89,7 +95,9 @@ export default function ProjectsWindow() {
                         }}
                     >
                       <h3 style={{ fontSize: "12px", fontWeight: "bold", margin: "0", color: "#000080" }}>
-                        {project.name}
+                          <a href={project.link} target="_blank">
+                              {project.name}
+                          </a>
                       </h3>
                       <div
                           style={{
@@ -128,7 +136,7 @@ export default function ProjectsWindow() {
             }}
         >
           <div style={{ fontSize: "11px", textAlign: "center", margin: "0" }}>
-            💡 <strong>Tip:</strong> Double-click on any project to view more details and live demos!
+            💡 <strong>Tip:</strong> Click on the title of any project to view more details and live demos!
           </div>
         </div>
       </div>
