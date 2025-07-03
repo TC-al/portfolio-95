@@ -12,7 +12,6 @@ export default function StartMenu({ onClose, onItemClick }: StartMenuProps) {
         )
 
         if (shutdownConfirm) {
-            // Create a shutdown screen overlay
             const shutdownOverlay = document.createElement("div")
             shutdownOverlay.style.cssText = `
         position: fixed;
