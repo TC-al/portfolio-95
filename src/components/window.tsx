@@ -12,7 +12,7 @@ interface WindowProps {
     onFocus: () => void
 }
 
-export default function Window({ id, title, children, isActive, onClose, onFocus }: WindowProps) {
+export default function Window({ title, children, isActive, onClose, onFocus }: WindowProps) {
     const [position, setPosition] = useState({ x: 100, y: 50 })
     const [size, setSize] = useState({ width: 480, height: 360 })
     const [isDragging, setIsDragging] = useState(false)

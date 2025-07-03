@@ -120,10 +120,10 @@ export default function ContactWindow() {
                 color: "#000080",
               }}
           >
-            Let's Collaborate!
+            Let&apos;s Collaborate!
           </h3>
           <p style={{ fontSize: "11px", lineHeight: "1.4", margin: "0" }}>
-            I'm always interested in new opportunities and exciting projects. Whether you have a question, want to
+            I&apos;m always interested in new opportunities and exciting projects. Whether you have a question, want to
             collaborate, or just want to say hi, feel free to reach out!
           </p>
         </div>
