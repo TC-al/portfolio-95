@@ -3,28 +3,36 @@ export default function ExtraWindow() {
         {
             name: "Abbey Park High School",
             image: "abbey_park.png",
-            description: "In Abbey Park High School, I hold various leadership positions, including playing varsity badminton for 2 years, as well as the Principles Trainer for DECA. Additionally, I am the President of the Badminton Club, the Co-founder of the Data Science Club, as well as the Public Relations Manager of the TEDx Club, and the Lead Drummer for the Manifesto Rock Band.",
-            awards: ["Top 10 Exams - DECA Regionals", "Silver Medal - Halton Badminton Finals"],
+            description: "At Abbey Park High School, I hold several leadership roles that span competitive academics, athletics, and the arts. " +
+                "I train my peers as the Principles Trainer for DECA and the Vice President of Training for Ethics Bowl. " +
+                "My passion for new ideas is reflected in my roles as Co-founder of the Data Science Club and Public Relations Manager for the TEDx Club. " +
+                "In athletics, I serve as President of the Badminton Club and have been a dedicated member of the varsity badminton team for two years. " +
+                "As a creative outlet, I am the Lead Drummer for the Manifesto Rock Band.",
+            awards: ["2x Honor Roll", "Top 10 Exams - DECA Regionals", "Silver Medal - Halton Badminton Finals"],
             status: "Ongoing",
         },
         {
             name: "Piano",
             image: "piano.jpg",
-            description: "I am a hobbyist and competitive pianist making my debut in Carnegie Hall at the age of 14, interested in playing mainly romantic-era music, my favourite composer being Franz Liszt. I've attended the 2025 Oberlin Summer Piano Festival where I've studied with Ethan Yi Dong, and Haewon Song. Additionally, I've also had the opportunity to play in masterclasses featuring renowned teachers such as Michael Berkovsky, Alexander Malikov and Rudin Lengo.",
-            awards: ["Gold Award - Steinway Piano Competition 2023", "Finalist - OMFA Open Level", "Runners Up - Doris Evans Award"],
+            description: "As a competitive pianist, I’ve been privileged to perform on a variety of wonderful stages, including Carnegie Hall, David H. Stull Recital Hall, and Kulas Recital Hall. " +
+                "My repertoire is centered on the Romantic era, and I have a deep passion for the brilliant and technically demanding works of my favorite composer, Franz Liszt. " +
+                "This summer, I continued my musical education at the 2025 Oberlin Summer Piano Festival, where I had the opportunity to study with Robert Shannon and Alvin Chow. " +
+                "I've also been fortunate to refine my skills in masterclasses with esteemed professors such as Michael Berkovsky, Carl Cranmer, Alexander Malikov, and Rudin Lengo.",
+            awards: ["Gold Award - Steinway Piano Competition 2023", "Finalist - 2025 OMFA Open Level", "Semi-Finalist - 2025 Oberlin Summer Piano Festival Competition"],
             status: "Music",
         },
         {
             name: "Badminton",
             image: "badminton.png",
-            description: "I'm a hobbyist and a competitive badminton player, training at Lions Badminton, as well as regularly competing in provincial competitions. Outside of my achievements in school tournaments, I am currently ranked 137th in Ontario for Boys Doubles.",
+            description: "I'm a dedicated and competitive badminton player who trains at Lions Badminton. " +
+                "I regularly compete in provincial tournaments and am currently ranked 137th in Ontario for Boys Doubles, in addition to my achievements in school tournaments.",
             awards: ["Provincially Ranked 137th"],
             status: "Athletic",
         },
         {
             name: "Hackathon Organizers",
-            image: "ember.svg",
-            description: "I am a 5x hackathon organizer, being the Lead Web Developer of Ember Hacks, the Web Developer Organizer for Eureka Hacks, the Finance Organizer of Incubator Hacks, the Finance & Logistics Organizer of Rythm Hacks, as well as the Event Organizer for Recess Hacks.",
+            image: "eureka.svg",
+            description: "I have extensive experience in hackathon organization, having served in various capacities for six different events. My roles have included leading as the Co-Lead Organizer for Eureka Hacks, and the Lead Web Developer for Ember Hacks. I have also managed finances and logistics as the Finance Organizer for Incubator Hacks and the Finance & Logistics Organizer for Rythm Hacks. Additionally, I've served as a Web Developer for Jam Hacks and the Event Organizer for Recess Hacks.",
             awards: [],
             status: "Leadership",
         },

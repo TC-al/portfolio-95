@@ -36,7 +36,7 @@ export default function AboutWindow() {
                             Hello, I&apos;m (Tsz Chai) Alan Liu
                         </h2>
                         <p style={{fontSize: "11px", lineHeight: "1.4", margin: "0", wordWrap: "break-word"}}>
-                            Welcome to Portfolio 95™! I&apos;m a 15 year-old Abbey Park High School rising junior currently based
+                            Welcome to Portfolio 95™! I&apos;m a 15 year-old Abbey Park High School Junior currently based
                             in the Greater Toronto Area.
                         </p>
                     </div>
@@ -67,15 +67,14 @@ export default function AboutWindow() {
                     Background
                 </h3>
                 <p style={{fontSize: "11px", lineHeight: "1.4", margin: "0", wordWrap: "break-word"}}>
-                    I am an AP student with a deep passion for software engineering, specializing in full-stack
-                    development.
+                    I am an AP student with a deep passion for software engineering as well as blockchain technology.
                     I build projects using the MERN stack and have demonstrated my commitment to innovation by being a
-                    6x hackathon participant, including the best UI/UX award at Hack The Ridge 2025, as well as serving
+                    6x hackathon participant, including the best UI/UX award at Hack The Ridge 2025, the Best Hack for a Social Cause at Hack404, as well as serving
                     as a judge at Incubator Hacks and Eureka Hacks.
+                    I also utilize Solidity, on the Ethereum blockchain to build meaningful applications which are impactful around the world.
                     Additionally, I am a machine learning research assistant at the University of Toronto Mississauga under Dr. Rutwa Engineer.
                     I am always eager to network and collaborate with fellow professionals.
-                    Beyond technology, I am a competitive pianist, making my Carnegie Hall debut in 2023, and a
-                    provincially ranked badminton player.
+                    Beyond technology, I also play the piano, having previously studied with Robert Shannon at the Oberlin Conservatory, as well as being a provincially ranked badminton player.
                 </p>
             </div>
 
@@ -105,7 +104,7 @@ export default function AboutWindow() {
                 <div style={{fontSize: "11px", lineHeight: "1.6", margin: "0"}}>
                     <div style={{marginBottom: "2px"}}>• React (js, ts, next)</div>
                     <div style={{marginBottom: "2px"}}>• Python (tensorflow, numpy)</div>
-                    <div style={{marginBottom: "2px"}}>• Java</div>
+                    <div style={{marginBottom: "2px"}}>• Ethereum (solidity)</div>
                     <div style={{marginBottom: "0"}}>• Game Dev (Unity - C#, Ue5 - C++)</div>
                 </div>
             </div>

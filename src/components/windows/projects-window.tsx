@@ -1,6 +1,14 @@
 export default function ProjectsWindow() {
   const projects = [
     {
+      name: "Eve",
+      tech: "Next, PWA, Auth.js, Neon, MongoDB, ElevenLabs",
+      description: "Personal safety network on campus through real-time alerts on incidents",
+      link: "https://eve.codelikecrazy.dev/",
+      image: "eve.jpg",
+      status: "Live",
+    },
+    {
       name: "SkinScope",
       tech: "React, Yolo, Tensorflow, OpenAI API",
       description: "Skin cancer detect application using the HAM10000 dataset, recognizing 7 different types of skin diseases",
@@ -9,20 +17,12 @@ export default function ProjectsWindow() {
       status: "Completed",
     },
     {
-      name: "Club Bubbles",
-      tech: "React, Node.js, MongoDB, Cerebras API",
-      description: "Collaborative project management tool with real-time updates and team features",
-      link: "https://devpost.com/software/club-bubbles",
-      image: "ClubBubbles.jpg",
+      name: "Jupbox",
+      tech: "Next.js, Roboflow, Spotify API, Qdrant",
+      description: "Real-time music control system combining Spotify integration with hand gesture detection",
+      link: "https://devpost.com/software/jupbox",
+      image: "jupbox.jpg",
       status: "Completed",
-    },
-    {
-      name: "Stockify",
-      tech: "Next.js, API Integration, Supabase",
-      description: "Stock Market Predictor",
-      link: "https://stockify.tcal.xyz",
-      image: "e",
-      status: "In Progress",
     },
     {
       name: "Portfolio 95™",
