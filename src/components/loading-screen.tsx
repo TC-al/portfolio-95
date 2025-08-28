@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, useMemo } from "react"
 
 interface LoadingScreenProps {
     onComplete: () => void
@@ -10,7 +10,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
     const [currentStep, setCurrentStep] = useState(0)
     const [dots, setDots] = useState("")
 
-    const bootSequence = [
+    const bootSequence = useMemo(() => [
         { text: "PCx86 v2.23", delay: 300 },
         { text: "Copyright Â© 2025 Alan Liu <tc.alanliu@tcal.xyz>", delay: 200 },
         { text: "License: MIT <https://www.pcjs.org/LICENSE.txt>", delay: 200 },
@@ -33,7 +33,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
         { text: "RAMx86: Extended memory at 0x100000", delay: 150 },
         { text: "Busx86: 32Kb VIDEO at 0xB8000", delay: 150 },
         { text: "Initialization complete", delay: 500 },
-    ]
+    ], [])
 
     const skipToNext = useCallback(() => {
         if (currentStep < bootSequence.length) {
@@ -104,7 +104,6 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
                 zIndex: 9999,
             }}
         >
-            {/* Skip tip */}
             <div style={{
                 position: "absolute",
                 top: "20px",
