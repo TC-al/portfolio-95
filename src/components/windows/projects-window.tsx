@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function ProjectsWindow() {
   const projects = [
     {
@@ -5,7 +7,7 @@ export default function ProjectsWindow() {
       tech: "Next, PWA, Auth.js, Neon, MongoDB, ElevenLabs",
       description: "Personal safety network on campus through real-time alerts on incidents",
       link: "https://eve.codelikecrazy.dev/",
-      image: "eve.jpg",
+      image: "/eve.jpg",
       status: "Live",
     },
     {
@@ -13,7 +15,7 @@ export default function ProjectsWindow() {
       tech: "React, Yolo, Tensorflow, OpenAI API",
       description: "Skin cancer detect application using the HAM10000 dataset, recognizing 7 different types of skin diseases",
       link: "https://devpost.com/software/skinscope",
-      image: "SkinScope.jpg",
+      image: "/SkinScope.jpg",
       status: "Completed",
     },
     {
@@ -21,7 +23,7 @@ export default function ProjectsWindow() {
       tech: "Next.js, Roboflow, Spotify API, Qdrant",
       description: "Real-time music control system combining Spotify integration with hand gesture detection",
       link: "https://devpost.com/software/jupbox",
-      image: "jupbox.jpg",
+      image: "/jupbox.jpg",
       status: "Completed",
     },
     {
@@ -29,7 +31,7 @@ export default function ProjectsWindow() {
       tech: "Next.js, CSS, Tailwind",
       description: "This retro Windows 95 themed portfolio you're currently viewing!",
       link: "https://www.tcal.xyz",
-      image: "logo.png",
+      image: "/logo.png",
       status: "Live",
     },
   ]
@@ -81,7 +83,14 @@ export default function ProjectsWindow() {
               >
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
                   <div style={{ fontSize: "10px", lineHeight: "1", flexShrink: 0 }}>
-                      <img src={project.image} alt={project.name} height="100" />
+                      <Image
+                          src={project.image}
+                          alt={project.name}
+                          height={100}
+                          width={150}
+                          sizes="(max-width: 768px) 100px, 200px"
+                          style={{ objectFit: 'cover', height: 'auto', width: 'auto', maxHeight: '100px' }}
+                      />
                   </div>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div

@@ -1,8 +1,10 @@
+import Image from 'next/image'
+
 export default function ExtraWindow() {
     const extracurriculars = [
         {
             name: "Abbey Park High School",
-            image: "abbey_park.png",
+            image: "/abbey_park.png",
             description: "At Abbey Park High School, I hold several leadership roles that span competitive academics, athletics, and the arts. " +
                 "I train my peers as the Principles Trainer for DECA and the Vice President of Training for Ethics Bowl. " +
                 "My passion for new ideas is reflected in my roles as Co-founder of the Data Science Club and Public Relations Manager for the TEDx Club. " +
@@ -13,7 +15,7 @@ export default function ExtraWindow() {
         },
         {
             name: "Piano",
-            image: "piano.jpg",
+            image: "/piano.jpg",
             description: "As a competitive pianist, I’ve been privileged to perform on a variety of wonderful stages, including Carnegie Hall, David H. Stull Recital Hall, and Kulas Recital Hall. " +
                 "My repertoire is centered on the Romantic era, and I have a deep passion for the brilliant and technically demanding works of my favorite composer, Franz Liszt. " +
                 "This summer, I continued my musical education at the 2025 Oberlin Summer Piano Festival, where I had the opportunity to study with Robert Shannon and Alvin Chow. " +
@@ -23,7 +25,7 @@ export default function ExtraWindow() {
         },
         {
             name: "Badminton",
-            image: "badminton.png",
+            image: "/badminton.png",
             description: "I'm a dedicated and competitive badminton player who trains at Lions Badminton. " +
                 "I regularly compete in provincial tournaments and am currently ranked 137th in Ontario for Boys Doubles, in addition to my achievements in school tournaments.",
             awards: ["Provincially Ranked 137th"],
@@ -31,7 +33,7 @@ export default function ExtraWindow() {
         },
         {
             name: "Hackathon Organizers",
-            image: "eureka.svg",
+            image: "/eureka.svg",
             description: "I have extensive experience in hackathon organization, having served in various capacities for six different events. My roles have included leading as the Co-Lead Organizer for Eureka Hacks, and the Lead Web Developer for Ember Hacks. I have also managed finances and logistics as the Finance Organizer for Incubator Hacks and the Finance & Logistics Organizer for Rythm Hacks. Additionally, I've served as a Web Developer for Jam Hacks and the Event Organizer for Recess Hacks.",
             awards: [],
             status: "Leadership",
@@ -85,7 +87,14 @@ export default function ExtraWindow() {
                     >
                         <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "8px" }}>
                             <div style={{ fontSize: "12px", lineHeight: "1", flexShrink: 0 }}>
-                                <img src={activity.image} alt={activity.name} height="100"/>
+                                <Image
+                                    src={activity.image}
+                                    alt={activity.name}
+                                    height={100}
+                                    width={100}
+                                    sizes="(max-width: 768px) 100px, 100px"
+                                    style={{ objectFit: 'cover', height: 'auto', width: 'auto', maxHeight: '100px' }}
+                                />
                             </div>
                             <div style={{ flex: 1, minWidth: 0 }}>
                                 <div
