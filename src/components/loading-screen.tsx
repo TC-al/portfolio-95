@@ -12,7 +12,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
 
     const bootSequence = useMemo(() => [
         { text: "PCx86 v2.23", delay: 300 },
-        { text: "Copyright Â© 2025 Alan Liu <tc.alanliu@tcal.xyz>", delay: 200 },
+        { text: "Copyright © 2025 Alan Liu <tc.alanliu@tcal.xyz>", delay: 200 },
         { text: "License: MIT <https://www.pcjs.org/LICENSE.txt>", delay: 200 },
         { text: "Loading /machines/pcx86/compaq/deskpro386/rom/1988-01-28/1988-01-28.json5", delay: 500, dots: true },
         { text: "Loading /machines/pcx86/ibm/video/vga/1986-10-27/1986-VGA.json5", delay: 400, dots: true },

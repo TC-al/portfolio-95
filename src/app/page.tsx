@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import LoadingScreen from "../components/loading-screen"
 import Desktop from "../components/desktop"
 import Window from "../components/window"
@@ -9,11 +9,29 @@ import ProjectsWindow from "../components/windows/projects-window"
 import ContactWindow from "../components/windows/contact-window"
 import ResumeWindow from "../components/windows/resume-window"
 import ExtraWindow from "../components/windows/extra-window"
+import MobileApp from "../components/mobile/mobile"
+
+function useIsMobile() {
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        const checkDevice = () => {
+            setIsMobile(window.innerWidth < 1400)
+        }
+
+        checkDevice()
+        window.addEventListener("resize", checkDevice)
+        return () => window.removeEventListener("resize", checkDevice)
+    }, [])
+
+    return isMobile
+}
 
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true)
     const [openWindows, setOpenWindows] = useState<string[]>([])
     const [activeWindow, setActiveWindow] = useState<string | null>(null)
+    const isMobile = useIsMobile()
 
     const handleLoadingComplete = () => {
         setIsLoading(false)
@@ -40,6 +58,10 @@ export default function Home() {
 
     if (isLoading) {
         return <LoadingScreen onComplete={handleLoadingComplete} />
+    }
+
+    if (isMobile) {
+        return <MobileApp />
     }
 
     return (

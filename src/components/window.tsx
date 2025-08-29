@@ -210,7 +210,6 @@ export default function Window({ title, children, isActive, onClose, onFocus }: 
                 {children}
             </div>
 
-            {/* Corner resize handles */}
             <div
                 style={{
                     position: "absolute",
@@ -262,7 +261,6 @@ export default function Window({ title, children, isActive, onClose, onFocus }: 
                 onMouseDown={(e) => handleResizeStart(e, "bottom-right")}
             />
 
-            {/* Edge resize handles */}
             <div
                 style={{
                     position: "absolute",
