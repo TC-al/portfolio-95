@@ -31,7 +31,7 @@ const MobileContact = () => (
         ))}
 
         <div className="bg-green-100 p-4 rounded-lg">
-            <h3 className="font-bold text-green-800 mb-2">Let's Collaborate!</h3>
+            <h3 className="font-bold text-green-800 mb-2">Let&apos;s Collaborate!</h3>
             <p className="text-sm text-green-700">
                 Always interested in new opportunities and projects. Feel free to reach out!
             </p>

@@ -32,7 +32,7 @@ const MobileResume = () => (
             <div>
                 <div className="font-medium text-sm">Abbey Park High School</div>
                 <div className="text-xs text-gray-500">Junior • Expected 2027</div>
-                <div className="text-xs">Honour's Roll 23-25 • GPA: 4.0/4.0</div>
+                <div className="text-xs">Honour&apos;s Roll 23-25 • GPA: 4.0/4.0</div>
             </div>
         </div>
 
