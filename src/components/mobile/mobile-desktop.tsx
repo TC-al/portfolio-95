@@ -24,10 +24,10 @@ const MobileDesktop = ({ onIconClick, activeSection }: MobileDesktopProps) => {
         { id: "extra", label: "More", icon: "🏆", gradient: "linear-gradient(135deg, #feca57, #ff9ff3)" },
     ]
 
-    const dockApps = [
+    /*const dockApps = [
         { id: "resume", label: "Resume", icon: "📄", gradient: "linear-gradient(135deg, #ff9ff3, #f368e0)" },
         { id: "extra", label: "Awards", icon: "🏆", gradient: "linear-gradient(135deg, #feca57, #ff9ff3)" },
-    ]
+    ]*/
 
     return (
         <div
