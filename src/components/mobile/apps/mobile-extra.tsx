@@ -1,7 +1,12 @@
 const MobileExtra = () => (
-    <div className="space-y-4">
-        <div className="bg-white p-4 rounded-lg shadow">
-            <h2 className="font-bold text-blue-600 mb-4">🏆 Extracurriculars</h2>
+    <div style={{display: 'flex', flexDirection: 'column', gap: '16px'}}>
+        <div style={{
+            background: 'white',
+            padding: '16px',
+            borderRadius: '8px',
+            boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
+        }}>
+            <h2 style={{fontWeight: 'bold', color: '#2563eb', marginBottom: '16px', fontSize: '18px', margin: '0 0 16px 0'}}>🏆 Extracurriculars</h2>
         </div>
 
         {[
@@ -26,24 +31,38 @@ const MobileExtra = () => (
                 status: "Tech"
             }
         ].map((activity, index) => (
-            <div key={index} className="bg-white p-4 rounded-lg shadow">
-                <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-bold text-blue-600 flex-1">{activity.name}</h3>
-                    <span className={`text-xs px-2 py-1 rounded ml-2 ${
-                        activity.status === 'Leadership' ? 'bg-yellow-200 text-yellow-800' :
-                            activity.status === 'Music' ? 'bg-green-200 text-green-800' :
-                                activity.status === 'Athletic' ? 'bg-orange-200 text-orange-800' :
-                                    'bg-purple-200 text-purple-800'
-                    }`}>
-            {activity.status}
-          </span>
+            <div key={index} style={{
+                background: 'white',
+                padding: '16px',
+                borderRadius: '8px',
+                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
+            }}>
+                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px'}}>
+                    <h3 style={{fontWeight: 'bold', color: '#2563eb', flex: '1', fontSize: '16px', margin: '0'}}>{activity.name}</h3>
+                    <span style={{
+                        fontSize: '12px',
+                        padding: '2px 8px',
+                        borderRadius: '4px',
+                        marginLeft: '8px',
+                        ...(activity.status === 'Leadership' ? {background: '#fef3c7', color: '#92400e'} :
+                            activity.status === 'Music' ? {background: '#dcfce7', color: '#166534'} :
+                                activity.status === 'Athletic' ? {background: '#fed7aa', color: '#9a3412'} :
+                                    {background: '#e9d5ff', color: '#7c3aed'})
+                    }}>
+                        {activity.status}
+                    </span>
                 </div>
-                <p className="text-sm text-gray-700">{activity.roles}</p>
+                <p style={{fontSize: '14px', color: '#374151', margin: '0'}}>{activity.roles}</p>
             </div>
         ))}
 
-        <div className="bg-yellow-100 p-4 rounded-lg text-center">
-            <div className="text-sm">🌟 These activities shaped my leadership and teamwork!</div>
+        <div style={{
+            background: '#fef3c7',
+            padding: '16px',
+            borderRadius: '8px',
+            textAlign: 'center'
+        }}>
+            <div style={{fontSize: '14px'}}>🌟 These activities shaped my leadership and teamwork!</div>
         </div>
     </div>
 )

@@ -1,7 +1,12 @@
 const MobileContact = () => (
-    <div className="space-y-4">
-        <div className="bg-white p-4 rounded-lg shadow">
-            <h2 className="font-bold text-blue-600 mb-4">📞 Get In Touch</h2>
+    <div style={{display: 'flex', flexDirection: 'column', gap: '16px'}}>
+        <div style={{
+            background: 'white',
+            padding: '16px',
+            borderRadius: '8px',
+            boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
+        }}>
+            <h2 style={{fontWeight: 'bold', color: '#2563eb', marginBottom: '16px', fontSize: '18px', margin: '0 0 16px 0'}}>📞 Get In Touch</h2>
         </div>
 
         {[
@@ -10,29 +15,40 @@ const MobileContact = () => (
             { icon: "🙀", label: "GitHub", value: "github.com/TC-al", link: "https://github.com/TC-al" },
             { icon: "🔮", label: "Discord", value: "@yth3", link: null }
         ].map((contact, index) => (
-            <div key={index} className="bg-white p-4 rounded-lg shadow flex items-center">
-                <div className="text-2xl mr-4">{contact.icon}</div>
-                <div className="flex-1">
-                    <div className="font-medium text-sm">{contact.label}</div>
+            <div key={index} style={{
+                background: 'white',
+                padding: '16px',
+                borderRadius: '8px',
+                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+                display: 'flex',
+                alignItems: 'center'
+            }}>
+                <div style={{fontSize: '24px', marginRight: '16px'}}>{contact.icon}</div>
+                <div style={{flex: '1'}}>
+                    <div style={{fontWeight: '500', fontSize: '14px', marginBottom: '2px'}}>{contact.label}</div>
                     {contact.link ? (
                         <a
                             href={contact.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-600 text-sm"
+                            style={{color: '#2563eb', fontSize: '14px', textDecoration: 'none'}}
                         >
                             {contact.value}
                         </a>
                     ) : (
-                        <div className="text-blue-600 text-sm">{contact.value}</div>
+                        <div style={{color: '#2563eb', fontSize: '14px'}}>{contact.value}</div>
                     )}
                 </div>
             </div>
         ))}
 
-        <div className="bg-green-100 p-4 rounded-lg">
-            <h3 className="font-bold text-green-800 mb-2">Let&apos;s Collaborate!</h3>
-            <p className="text-sm text-green-700">
+        <div style={{
+            background: '#dcfce7',
+            padding: '16px',
+            borderRadius: '8px'
+        }}>
+            <h3 style={{fontWeight: 'bold', color: '#166534', marginBottom: '8px', fontSize: '16px', margin: '0 0 8px 0'}}>Let&apos;s Collaborate!</h3>
+            <p style={{fontSize: '14px', color: '#15803d', margin: '0'}}>
                 Always interested in new opportunities and projects. Feel free to reach out!
             </p>
         </div>

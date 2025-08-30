@@ -24,28 +24,43 @@ const MobileProjects = () => {
     ]
 
     return (
-        <div className="space-y-4">
+        <div style={{display: 'flex', flexDirection: 'column', gap: '16px'}}>
             {projects.map((project, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg shadow">
-                    <div className="flex justify-between items-start mb-2">
-                        <h3 className="font-bold text-blue-600">
-                            <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <div key={index} style={{
+                    background: 'white',
+                    padding: '16px',
+                    borderRadius: '8px',
+                    boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
+                }}>
+                    <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px'}}>
+                        <h3 style={{fontWeight: 'bold', color: '#2563eb', fontSize: '16px', margin: '0'}}>
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" style={{color: '#2563eb', textDecoration: 'none'}}>
                                 {project.name}
                             </a>
                         </h3>
-                        <span className={`text-xs px-2 py-1 rounded ${
-                            project.status === 'Live' ? 'bg-green-200 text-green-800' : 'bg-yellow-200 text-yellow-800'
-                        }`}>
-              {project.status}
-            </span>
+                        <span style={{
+                            fontSize: '12px',
+                            padding: '2px 8px',
+                            borderRadius: '4px',
+                            ...(project.status === 'Live'
+                                ? {background: '#dcfce7', color: '#166534'}
+                                : {background: '#fef3c7', color: '#92400e'})
+                        }}>
+                            {project.status}
+                        </span>
                     </div>
-                    <div className="text-xs text-blue-500 mb-2">{project.tech}</div>
-                    <p className="text-sm text-gray-700">{project.description}</p>
+                    <div style={{fontSize: '12px', color: '#3b82f6', marginBottom: '8px'}}>{project.tech}</div>
+                    <p style={{fontSize: '14px', color: '#374151', margin: '0'}}>{project.description}</p>
                 </div>
             ))}
 
-            <div className="bg-blue-100 p-4 rounded-lg text-center">
-                <div className="text-sm">💡 Tap project names to view demos!</div>
+            <div style={{
+                background: '#dbeafe',
+                padding: '16px',
+                borderRadius: '8px',
+                textAlign: 'center'
+            }}>
+                <div style={{fontSize: '14px'}}>💡 Tap project names to view demos!</div>
             </div>
         </div>
     )

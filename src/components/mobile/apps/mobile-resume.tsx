@@ -1,44 +1,75 @@
 const MobileResume = () => (
-    <div className="space-y-4">
-        <div className="bg-white p-4 rounded-lg shadow flex justify-between items-center">
-            <h2 className="font-bold text-blue-600">📄 Resume</h2>
+    <div style={{display: 'flex', flexDirection: 'column', gap: '16px'}}>
+        <div style={{
+            background: 'white',
+            padding: '16px',
+            borderRadius: '8px',
+            boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center'
+        }}>
+            <h2 style={{fontWeight: 'bold', color: '#2563eb', fontSize: '18px', margin: '0'}}>📄 Resume</h2>
             <a
                 href="/AlanLiuResume.pdf"
                 download="AlanLiuResume.pdf"
-                className="bg-blue-600 text-white px-3 py-1 rounded text-sm active:bg-blue-700"
+                style={{
+                    background: '#2563eb',
+                    color: 'white',
+                    padding: '4px 12px',
+                    borderRadius: '4px',
+                    fontSize: '14px',
+                    textDecoration: 'none',
+                    cursor: 'pointer'
+                }}
             >
                 Download PDF
             </a>
         </div>
 
-        <div className="bg-white p-4 rounded-lg shadow">
-            <h3 className="font-bold text-blue-600 mb-3">💼 Experience</h3>
-            <div className="space-y-3">
+        <div style={{
+            background: 'white',
+            padding: '16px',
+            borderRadius: '8px',
+            boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
+        }}>
+            <h3 style={{fontWeight: 'bold', color: '#2563eb', marginBottom: '12px', fontSize: '16px', margin: '0 0 12px 0'}}>💼 Experience</h3>
+            <div style={{display: 'flex', flexDirection: 'column', gap: '12px'}}>
                 <div>
-                    <div className="font-medium text-sm">Research Assistant</div>
-                    <div className="text-xs text-gray-500">University of Toronto Mississauga • Jun 2025 — Present</div>
-                    <div className="text-xs mt-1">ML research under Dr. Rutwa Engineer</div>
+                    <div style={{fontWeight: '500', fontSize: '14px'}}>Research Assistant</div>
+                    <div style={{fontSize: '12px', color: '#6b7280'}}>University of Toronto Mississauga • Jun 2025 — Present</div>
+                    <div style={{fontSize: '12px', marginTop: '4px'}}>ML research under Dr. Rutwa Engineer</div>
                 </div>
                 <div>
-                    <div className="font-medium text-sm">Lead Web Developer</div>
-                    <div className="text-xs text-gray-500">Ember Hacks • Jun 2025 — Present</div>
-                    <div className="text-xs mt-1">Built React/Next.js websites with Three.js</div>
+                    <div style={{fontWeight: '500', fontSize: '14px'}}>Lead Web Developer</div>
+                    <div style={{fontSize: '12px', color: '#6b7280'}}>Ember Hacks • Jun 2025 — Present</div>
+                    <div style={{fontSize: '12px', marginTop: '4px'}}>Built React/Next.js websites with Three.js</div>
                 </div>
             </div>
         </div>
 
-        <div className="bg-white p-4 rounded-lg shadow">
-            <h3 className="font-bold text-blue-600 mb-3">🎓 Education</h3>
+        <div style={{
+            background: 'white',
+            padding: '16px',
+            borderRadius: '8px',
+            boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
+        }}>
+            <h3 style={{fontWeight: 'bold', color: '#2563eb', marginBottom: '12px', fontSize: '16px', margin: '0 0 12px 0'}}>🎓 Education</h3>
             <div>
-                <div className="font-medium text-sm">Abbey Park High School</div>
-                <div className="text-xs text-gray-500">Junior • Expected 2027</div>
-                <div className="text-xs">Honour&apos;s Roll 23-25 • GPA: 4.0/4.0</div>
+                <div style={{fontWeight: '500', fontSize: '14px'}}>Abbey Park High School</div>
+                <div style={{fontSize: '12px', color: '#6b7280'}}>Junior • Expected 2027</div>
+                <div style={{fontSize: '12px'}}>Honour&apos;s Roll 23-25 • GPA: 4.0/4.0</div>
             </div>
         </div>
 
-        <div className="bg-white p-4 rounded-lg shadow">
-            <h3 className="font-bold text-blue-600 mb-3">🏆 Awards</h3>
-            <div className="text-xs space-y-1">
+        <div style={{
+            background: 'white',
+            padding: '16px',
+            borderRadius: '8px',
+            boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
+        }}>
+            <h3 style={{fontWeight: 'bold', color: '#2563eb', marginBottom: '12px', fontSize: '16px', margin: '0 0 12px 0'}}>🏆 Awards</h3>
+            <div style={{fontSize: '12px', display: 'flex', flexDirection: 'column', gap: '4px'}}>
                 <div>• Best UI/UX - Hack The Ridge 2024</div>
                 <div>• Best Hack for Social Cause - Hack404</div>
                 <div>• Distinction: Pascal, Cayley, COMC, Galois</div>
