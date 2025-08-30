@@ -14,7 +14,7 @@ export default function MobileApp() {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        const timer = setTimeout(() => setIsLoading(false), 1500)
+        const timer = setTimeout(() => setIsLoading(false), 2000)
         return () => clearTimeout(timer)
     }, [])
 
@@ -50,25 +50,62 @@ export default function MobileApp() {
             case "extra":
                 return <MobileExtra />
             default:
-                return <div>Content not found</div>
+                return <div style={{textAlign: 'center', color: '#6b7280'}}>Content not found</div>
         }
     }
 
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-black text-green-400 flex items-center justify-center font-mono">
-                <div className="text-center">
-                    <div className="text-2xl mb-4">💻</div>
-                    <div className="text-lg mb-2">Portfolio 95™</div>
-                    <div className="text-sm">Loading mobile interface...</div>
-                    <div className="mt-4 text-xs opacity-60">Optimized for touch</div>
+            <div style={{
+                minHeight: '100vh',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontFamily: 'system-ui, monospace',
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+            }}>
+                <div style={{textAlign: 'center', color: 'white'}}>
+                    <div style={{
+                        fontSize: '64px',
+                        marginBottom: '16px'
+                    }}>💻</div>
+                    <div style={{fontSize: '32px', marginBottom: '8px', fontWeight: '300'}}>Portfolio 95™</div>
+                    <div style={{fontSize: '14px', opacity: '0.8'}}>Loading mobile interface...</div>
+                    <div style={{marginTop: '16px', fontSize: '12px', opacity: '0.6'}}>Optimized for touch</div>
+
+                    <div style={{marginTop: '24px', display: 'flex', justifyContent: 'center', gap: '4px'}}>
+                        <div style={{
+                            width: '8px',
+                            height: '8px',
+                            background: 'white',
+                            borderRadius: '50%'
+                        }}></div>
+                        <div style={{
+                            width: '8px',
+                            height: '8px',
+                            background: 'white',
+                            borderRadius: '50%',
+                            opacity: '0.7'
+                        }}></div>
+                        <div style={{
+                            width: '8px',
+                            height: '8px',
+                            background: 'white',
+                            borderRadius: '50%',
+                            opacity: '0.5'
+                        }}></div>
+                    </div>
                 </div>
             </div>
         )
     }
 
     return (
-        <div className="touch-manipulation select-none">
+        <div style={{
+            WebkitTouchCallout: 'none',
+            WebkitUserSelect: 'none',
+            userSelect: 'none'
+        }}>
             {activeSection ? (
                 <MobileWindow title={getSectionTitle(activeSection)} onBack={handleBack}>
                     {renderSectionContent(activeSection)}
