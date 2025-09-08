@@ -36,7 +36,7 @@ export default function AboutWindow() {
                             Hello, I&apos;m (Tsz Chai) Alan Liu
                         </h2>
                         <p style={{fontSize: "11px", lineHeight: "1.4", margin: "0", wordWrap: "break-word"}}>
-                            Welcome to Portfolio 95™! I&apos;m a 15 year-old Abbey Park High School Junior currently based
+                            Welcome to Portfolio 95™! I&apos;m a 16-year-old Abbey Park High School Junior currently based
                             in the Greater Toronto Area.
                         </p>
                     </div>

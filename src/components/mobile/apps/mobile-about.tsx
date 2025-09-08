@@ -10,7 +10,7 @@ const MobileAbout = () => (
                 <div style={{fontSize: '32px', marginRight: '16px'}}>👨‍💻</div>
                 <div>
                     <h2 style={{fontSize: '18px', fontWeight: 'bold', color: '#2563eb', margin: '0 0 4px 0'}}>Hello, I&apos;m Alan Liu</h2>
-                    <p style={{fontSize: '14px', color: '#6b7280', margin: '0'}}>15-year-old Developer from GTA</p>
+                    <p style={{fontSize: '14px', color: '#6b7280', margin: '0'}}>16-year-old Developer from GTA</p>
                 </div>
             </div>
             <p style={{fontSize: '14px', lineHeight: '1.5', margin: '0'}}>
