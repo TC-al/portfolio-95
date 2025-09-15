@@ -27,7 +27,7 @@ export default function ExtraWindow() {
             name: "Badminton",
             image: "/badminton.png",
             description: "I'm a dedicated and competitive badminton player who trains at Lions Badminton. " +
-                "I regularly compete in provincial tournaments and am currently ranked 137th in Ontario for Boys Doubles, in addition to my achievements in school tournaments.",
+                "I regularly compete in provincial tournaments and am currently ranked 92nd in Ontario for Boys Doubles, in addition to my achievements in school tournaments.",
             awards: ["Provincially Ranked 137th"],
             status: "Athletic",
         },
