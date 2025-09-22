@@ -28,7 +28,7 @@ const MobileAbout = () => (
             <h3 style={{fontWeight: 'bold', color: '#2563eb', marginBottom: '8px', fontSize: '16px', margin: '0 0 8px 0'}}>Background</h3>
             <p style={{fontSize: '14px', lineHeight: '1.5', margin: '0'}}>
                 I&apos;m an AP student with experience in the MERN stack and blockchain technology.
-                I&apos;ve participated in 6 hackathons, including wins for Best UI/UX and Best Hack for Social Cause.
+                I&apos;ve participated in 9 hackathons, including wins for Best UI/UX, Best Entertainment, and Best Hack for Social Cause.
                 I&apos;m also a machine learning research assistant at the University of Toronto Mississauga.
             </p>
         </div>

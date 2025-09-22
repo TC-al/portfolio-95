@@ -70,6 +70,7 @@ const MobileResume = () => (
         }}>
             <h3 style={{fontWeight: 'bold', color: '#2563eb', marginBottom: '12px', fontSize: '16px', margin: '0 0 12px 0'}}>🏆 Awards</h3>
             <div style={{fontSize: '12px', display: 'flex', flexDirection: 'column', gap: '4px'}}>
+                <div>• Entertainment Track Winner - PennApps</div>
                 <div>• Best UI/UX - Hack The Ridge 2024</div>
                 <div>• Best Hack for Social Cause - Hack404</div>
                 <div>• Distinction: Pascal, Cayley, COMC, Galois</div>

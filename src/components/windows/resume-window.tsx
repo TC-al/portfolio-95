@@ -208,10 +208,10 @@ export default function ResumeWindow() {
                       🏆 Awards
                   </h3>
                   <div style={{fontSize: "11px", lineHeight: "1.4"}}>
+                      <div>• Entertainment Track Winner - PennApps</div>
                       <div>• Best UI/UX - Hack The Ridge 2024</div>
                       <div>• Best Hack for a Social Cause - Hack404</div>
                       <div>• Distinction: Pascal, Cayley, COMC, Galois</div>
-                      <div>• Distinguished Scholars - International Research Olympiad</div>
                   </div>
               </div>
 

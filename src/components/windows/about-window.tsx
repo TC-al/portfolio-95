@@ -69,8 +69,9 @@ export default function AboutWindow() {
                 <p style={{fontSize: "11px", lineHeight: "1.4", margin: "0", wordWrap: "break-word"}}>
                     I am an AP student with a deep passion for software engineering as well as blockchain technology.
                     I build projects using the MERN stack and have demonstrated my commitment to innovation by being a
-                    6x hackathon participant, including the best UI/UX award at Hack The Ridge 2025, the Best Hack for a Social Cause at Hack404, as well as serving
-                    as a judge at Incubator Hacks and Eureka Hacks.
+                    9x hackathon participant, including the best UI/UX award at Hack The Ridge 2025, the Best Hack for a Social Cause at Hack404,
+                    the Winner of the Entertainment Track at PennApps XXVI
+                    as well as serving as a judge at Incubator Hacks and Eureka Hacks.
                     I also utilize Solidity, on the Ethereum blockchain to build meaningful applications which are impactful around the world.
                     Additionally, I am a machine learning research assistant at the University of Toronto Mississauga under Dr. Rutwa Engineer.
                     I am always eager to network and collaborate with fellow professionals.
