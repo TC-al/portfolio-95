@@ -11,6 +11,14 @@ export default function ProjectsWindow() {
       status: "Live",
     },
     {
+        name: "Blitz",
+        tech: "Pygame, OpenGL, OpenCV, Mediapipe",
+        description: "Budget augmented reality FPS game using a cardboard gun and webcam for tracking",
+        link: "https://devpost.com/software/cv-fps",
+        image: "/blitz.jpg",
+        status: "Completed",
+    },
+    {
       name: "SkinScope",
       tech: "React, Yolo, Tensorflow, OpenAI API",
       description: "Skin cancer detect application using the HAM10000 dataset, recognizing 7 different types of skin diseases",
