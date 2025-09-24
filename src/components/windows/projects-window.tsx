@@ -7,7 +7,7 @@ export default function ProjectsWindow() {
       tech: "Next, PWA, Auth.js, Neon, MongoDB, ElevenLabs",
       description: "Personal safety network on campus through real-time alerts on incidents",
       link: "https://eve.codelikecrazy.dev/",
-      image: "/eve.jpg",
+      image: "/project/eve.jpg",
       status: "Live",
     },
     {
@@ -15,7 +15,7 @@ export default function ProjectsWindow() {
         tech: "Pygame, OpenGL, OpenCV, Mediapipe",
         description: "Budget augmented reality FPS game using a cardboard gun and webcam for tracking",
         link: "https://devpost.com/software/cv-fps",
-        image: "/blitz.jpg",
+        image: "/project/blitz.jpg",
         status: "Completed",
     },
     {
@@ -23,7 +23,7 @@ export default function ProjectsWindow() {
       tech: "React, Yolo, Tensorflow, OpenAI API",
       description: "Skin cancer detect application using the HAM10000 dataset, recognizing 7 different types of skin diseases",
       link: "https://devpost.com/software/skinscope",
-      image: "/SkinScope.jpg",
+      image: "/project/SkinScope.jpg",
       status: "Completed",
     },
     {
@@ -31,7 +31,7 @@ export default function ProjectsWindow() {
       tech: "Next.js, Roboflow, Spotify API, Qdrant",
       description: "Real-time music control system combining Spotify integration with hand gesture detection",
       link: "https://devpost.com/software/jupbox",
-      image: "/jupbox.jpg",
+      image: "/project/jupbox.jpg",
       status: "Completed",
     },
     {

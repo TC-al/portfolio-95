@@ -4,7 +4,7 @@ export default function ExtraWindow() {
     const extracurriculars = [
         {
             name: "Abbey Park High School",
-            image: "/abbey_park.png",
+            image: "/extra/abbey_park.png",
             description: "At Abbey Park High School, I hold several leadership roles that span competitive academics, athletics, and the arts. " +
                 "I train my peers as the Principles Trainer for DECA and the Vice President of Training for Ethics Bowl. " +
                 "My passion for new ideas is reflected in my roles as Co-founder of the Data Science Club and Public Relations Manager for the TEDx Club. " +
@@ -15,7 +15,7 @@ export default function ExtraWindow() {
         },
         {
             name: "Piano",
-            image: "/piano.jpg",
+            image: "/extra/piano.jpg",
             description: "As a competitive pianist, I’ve been privileged to perform on a variety of wonderful stages, including Carnegie Hall, David H. Stull Recital Hall, and Kulas Recital Hall. " +
                 "My repertoire is centered on the Romantic era, and I have a deep passion for the brilliant and technically demanding works of my favorite composer, Franz Liszt. " +
                 "This summer, I continued my musical education at the 2025 Oberlin Summer Piano Festival, where I had the opportunity to study with Robert Shannon and Alvin Chow. " +
@@ -25,7 +25,7 @@ export default function ExtraWindow() {
         },
         {
             name: "Badminton",
-            image: "/badminton.png",
+            image: "/extra/badminton.png",
             description: "I'm a dedicated and competitive badminton player who trains at Lions Badminton. " +
                 "I regularly compete in provincial tournaments and am currently ranked 92nd in Ontario for the Under 19 Boys Doubles, " +
                 "as well as 128th for the Under 19 Boys Singles, in addition to my achievements in school tournaments.",
@@ -34,8 +34,8 @@ export default function ExtraWindow() {
         },
         {
             name: "Hackathon Organizers",
-            image: "/eureka.svg",
-            description: "I have extensive experience in hackathon organization, having served in various capacities for six different events. My roles have included leading as the Co-Lead Organizer for Eureka Hacks, and the Lead Web Developer for Ember Hacks. I have also managed finances and logistics as the Finance Organizer for Incubator Hacks and the Finance & Logistics Organizer for Rythm Hacks. Additionally, I've served as a Web Developer for Jam Hacks and the Event Organizer for Recess Hacks.",
+            image: "/extra/eureka.svg",
+            description: "I have extensive experience in hackathon organization, having served in various capacities for six different events. My roles have included leading as the Vice-President for Eureka Hacks, and the Lead Web Developer for Ember Hacks. I have also managed finances and logistics as the Finance Organizer for Incubator Hacks and the Finance & Logistics Organizer for Rythm Hacks. Additionally, I've served as a Web Developer for Jam Hacks and the Event Organizer for Recess Hacks.",
             awards: [],
             status: "Leadership",
         },
