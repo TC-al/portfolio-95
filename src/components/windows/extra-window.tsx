@@ -10,17 +10,17 @@ export default function ExtraWindow() {
                 "My passion for new ideas is reflected in my roles as Co-founder of the Data Science Club and Public Relations Manager for the TEDx Club. " +
                 "In athletics, I serve as President of the Badminton Club and have been a dedicated member of the varsity badminton team for two years. " +
                 "As a creative outlet, I am the Lead Drummer for the Manifesto Rock Band.",
-            awards: ["2x Honor Roll", "Top 10 Exams - DECA Regionals", "Silver Medal - Halton Badminton Finals"],
+            awards: ["2x Honor Roll", "Top 10 Exams - DECA Regionals", "National Finalist - FBLC", "Silver Medal - Halton Badminton Finals"],
             status: "Ongoing",
         },
         {
             name: "Piano",
             image: "/extra/piano.jpg",
-            description: "As a competitive pianist, I’ve been privileged to perform on a variety of wonderful stages, including Carnegie Hall, David H. Stull Recital Hall, and Kulas Recital Hall. " +
+            description: "As a competitive pianist, I’ve been privileged to perform on a variety of wonderful stages, including Carnegie Hall, Stull Hall, Kulas Hall and Kobacker Hall. " +
                 "My repertoire is centered on the Romantic era, and I have a deep passion for the brilliant and technically demanding works of my favorite composer, Franz Liszt. " +
                 "This summer, I continued my musical education at the 2025 Oberlin Summer Piano Festival, where I had the opportunity to study with Robert Shannon and Alvin Chow. " +
                 "I've also been fortunate to refine my skills in masterclasses with esteemed professors such as Michael Berkovsky, Carl Cranmer, Alexander Malikov, and Rudin Lengo.",
-            awards: ["Gold Award - Steinway Piano Competition 2023", "Finalist - 2025 OMFA Open Level", "Semi-Finalist - 2025 Oberlin Summer Piano Festival Competition"],
+            awards: ["Gold Award - Steinway Piano Competition 2023", "Finalist - 2025 OMFA Open Level", "Semi-Finalist - 2025 Oberlin Summer Piano Festival Competition", "Semi-Finalist - 2026 David D. Dubois Piano Competition"],
             status: "Music",
         },
         {

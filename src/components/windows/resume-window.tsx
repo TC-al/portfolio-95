@@ -72,12 +72,12 @@ export default function ResumeWindow() {
                               Research Assistant
                           </div>
                           <div style={{fontSize: "10px", color: "#666666", marginBottom: "4px"}}>
-                              University of Toronto Mississauga • Jun 2025 – Present
+                              University of Toronto Mississauga • May 2025 - Sep 2025
                           </div>
                           <div style={{fontSize: "11px", lineHeight: "1.3"}}>
-                              <div>• Machine learning research assistant under the tutelage of Dr. Rutwa Engineer</div>
+                              <div>• Machine learning user input prediction research under Dr. Rutwa Engineer</div>
+                              <div>• Appended a transformer layer improving architecture accuracy by 12%</div>
                               <div>• Collaborated with the Human Feedback Foundation and the Linux Foundation</div>
-                              <div>• Spearheaded documenting and cataloging weekly meetings</div>
                           </div>
                       </div>
                       <div>
@@ -85,12 +85,12 @@ export default function ResumeWindow() {
                               Lead Web Developer
                           </div>
                           <div style={{fontSize: "10px", color: "#666666", marginBottom: "4px"}}>
-                              Ember Hacks • Jun 2025 – Present
+                              Ember Hacks • Jun 2025 - Oct 2026
                           </div>
                           <div style={{fontSize: "11px", lineHeight: "1.3"}}>
-                              <div>• Built and maintained the Ember Hacks website using React and Next</div>
-                              <div>• Constructed of a Three.js and Blender model landing page design</div>
-                              <div>• Collaborated with design team to create pixel-perfect UIs</div>
+                              <div>• Built and maintained the Ember Hacks website using React and Next.js</div>
+                              <div>• Engineered an interactive 3D landing page with Three.js and custom Blender models</div>
+                              <div>• Animated website with GPU-accelerated CSS & lazy rendering, boosting speed by 40%</div>
                           </div>
                       </div>
                       <div>
@@ -98,12 +98,12 @@ export default function ResumeWindow() {
                               Web Developer
                           </div>
                           <div style={{fontSize: "10px", color: "#666666", marginBottom: "4px"}}>
-                              Jam Hacks • Aug 2025 – Present
+                              Jam Hacks • Aug 2025 - Present
                           </div>
                           <div style={{fontSize: "11px", lineHeight: "1.3"}}>
-                              <div>• Utilized Figma to layout the Jam Hacks website</div>
-                              <div>• Maintained the Jam Hacks website for its 10th iteration using React</div>
-                              <div>• Designed a Discord bot capable of handling hacker verification</div>
+                              <div>• Built the Jam Hacks 10 website, largest high school hackathon in Canada</div>
+                              <div>• Built a QR Code scanning system to handle over 200 expected participants</div>
+                              <div>• Optimized website loading time by 28% via static image caching and a CDN</div>
                           </div>
                       </div>
                   </div>
@@ -209,9 +209,9 @@ export default function ResumeWindow() {
                   </h3>
                   <div style={{fontSize: "11px", lineHeight: "1.4"}}>
                       <div>• Entertainment Track Winner - PennApps XXVI</div>
-                      <div>• Best UI/UX - Hack The Ridge 2024</div>
                       <div>• Best Hack for a Social Cause - Hack404</div>
-                      <div>• Distinction: Pascal, Cayley, COMC, Galois</div>
+                      <div>• Best UI/UX - Hack The Ridge 2024</div>
+                      <div>• Gold Division - USACO</div>
                   </div>
               </div>
 
@@ -237,21 +237,10 @@ export default function ResumeWindow() {
                   <div style={{display: "flex", flexDirection: "column", gap: "10px"}}>
                       <div>
                           <div style={{fontSize: "12px", fontWeight: "bold", marginBottom: "2px"}}>
-                              Dr. Rutwa Engineer
-                          </div>
-                          <div style={{fontSize: "10px", color: "#666666", marginBottom: "2px"}}>
-                              Assistant Professor of Mathematical and Computational Sciences
-                          </div>
-                          <div style={{fontSize: "11px", lineHeight: "1.3"}}>
-                              <div>rutwa.engineer@utoronto.ca</div>
-                          </div>
-                      </div>
-                      <div>
-                          <div style={{fontSize: "12px", fontWeight: "bold", marginBottom: "2px"}}>
                               Adam Rivard
                           </div>
                           <div style={{fontSize: "10px", color: "#666666", marginBottom: "2px"}}>
-                              Computer Science Teacher
+                              AP Computer Science Teacher
                           </div>
                           <div style={{fontSize: "11px", lineHeight: "1.3"}}>
                               <div>rivarda@hdsb.ca</div>
